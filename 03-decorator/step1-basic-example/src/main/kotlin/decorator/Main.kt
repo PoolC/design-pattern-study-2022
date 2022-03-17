@@ -3,7 +3,7 @@ package decorator
 import decorator.cafe.*
 
 fun main() {
-    var b: Beverage = MilkDecorator(
+    val beverage = MilkDecorator(
         WhipDecorator(
             MilkDecorator(
                 Espresso()
@@ -11,6 +11,6 @@ fun main() {
         )
     )
 
-    println(b.cost())
-    println(b.getDescription())
+    println(beverage.cost())
+    println(beverage.getDescription())
 }

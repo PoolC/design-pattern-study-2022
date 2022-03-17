@@ -1,9 +1,6 @@
 package decorator.cafe
 
 abstract class Beverage {
-    open fun getDescription(): List<String> {
-        return ArrayList()
-    }
-
+    abstract fun getDescription(): List<String>
     abstract fun cost(): Int
 }
