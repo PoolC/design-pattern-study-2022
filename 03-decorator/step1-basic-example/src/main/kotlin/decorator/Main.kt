@@ -3,12 +3,10 @@ package decorator
 import decorator.cafe.*
 
 fun main() {
-    val b = MilkDecorator(
-        MilkDecorator(
-            WhipDecorator(
-                MilkDecorator(
-                    Espresso()
-                )
+    var b: Beverage = MilkDecorator(
+        WhipDecorator(
+            MilkDecorator(
+                Espresso()
             )
         )
     )
