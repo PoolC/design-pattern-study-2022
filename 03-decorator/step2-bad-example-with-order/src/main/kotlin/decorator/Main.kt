@@ -3,18 +3,16 @@ package decorator
 import decorator.cafe.*
 
 fun main() {
-    val b =
+    val beverage = PrettyPrintDecorator(
         MilkDecorator(
-            PrettyPrintDecorator(
+            WhipDecorator(
                 MilkDecorator(
-                    WhipDecorator(
-                        MilkDecorator(
-                            Espresso()
-                        )
-                    )
+                    Espresso()
                 )
             )
         )
+    )
 
-    println(b.getDescription())
+    println(beverage.cost())
+    println(beverage.getDescription())
 }
